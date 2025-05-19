@@ -11,29 +11,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="favicon/favicon-book.png" type="image/x-icon">
 
 </head>
 
 <body>
+    <div class="dialog-popup">
+        <div>
+            <dialog id="popup">
+                <p>Seja bem vindo(a) ao meu site de leituras!</p>
+                <button id="close">Fechar</button>
+            </dialog>
+        </div>
+    </div>
+
     <div class="nav-container">
         <nav class="flex">
             <div class="logo-container">
                 <img src="img/book-logo.png" alt="book">
             </div>
-
             <div class="items">
                 <ul>
                     <li><a href="#">CURIOSIDADES</a></li>
-                    <li><a href="#">CATEGORIAS</a></li>
+
+                    <li><a href="#">CATEGORIAS</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#">Ficção</a></li>
+                                <li><a href="#">Fantasia</a></li>
+                                <li><a href="#">Romance</a></li>
+                                <li><a href="#">Autobiografia</a></li>
+                                <li><a href="#">Ficção Científica</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li><a href="#">RESENHAS</a></li>
                 </ul>
             </div>
-
             <div class="search-bar">
                 <form action="#" method="get">
-                    <input type="text" name="search" id="search">
-                    <img src="img/search.png" alt="">
+                    <input type="text" name="search" id="search" placeholder="O que você está procurando?">
+                    <img src="img/search.png" alt="lupa">
                 </form>
             </div>
         </nav>
@@ -76,75 +98,144 @@
                 </li>
             </ul>
         </section>
-
         <section class="container-recommendations">
             <h2>Explore por categorias de A a Z:</h2>
             <div class="book-rec">
                 <div class="recommendation">
-                    <p>A B C D E</p>
+                    <p>A B C D</p>
                 </div>
                 <div class="recommendation">
-                    <p>F G H I J</p>
+                    <p>E F G H</p>
                 </div>
                 <div class="recommendation">
-                    <p>K L M N O</p>
+                    <p>I J K L</p>
                 </div>
                 <div class="recommendation">
-                    <p>P Q R S T</p>
+                    <p>M N O P</p>
                 </div>
                 <div class="recommendation">
-                    <p>U V W</p>
+                    <p>Q R S T</p>
                 </div>
                 <div class="recommendation">
-                    <p>X Y Z</p>
+                    <p>U V</p>
+                </div>
+                <div class="recommendation">
+                    <p>W X</p>
+                </div>
+                <div class="recommendation">
+                    <p>Y Z</p>
                 </div>
             </div>
         </section>
-
         <section class="container-reviews">
             <h2>RESENHAS</h2>
             <div class="reviews">
                 <div class="books">
-                    <img src="img/fornos-hitler.jpg" alt="fornos-de-hitler">
-                    <p>Os Fornos de Hitler, de Olga Lengyel, é uma obra autobiográfica que retrata os horrores vividos
-                        pela autora durante sua prisão no campo de concentração de Auschwitz-Birkenau, durante a Segunda
-                        Guerra Mundial. Lengyel, que era uma enfermeira húngara de origem judia, foi deportada junto com
-                        sua família após serem enganados pelos nazistas.</p>
+                    <img src="img/culpa-das-estrelas.jpg" alt="livro a culpa é das estrelas">
+                    <h4>A Culpa é das Estrelas</h4>
+                    <p>Autor: John Green</p>
+                    <p>Gêneros: Romance, Ficcção</p>
+                    <button>Saiba mais</button>
                 </div>
                 <div class="books">
-                    <img src="img/colecionador.jpg" alt="fornos-de-hitler">
-                    <p>O Colecionador, de John Fowles, é um romance psicológico que explora a obsessão, a solidão e o
-                        confronto entre duas perspectivas de vida radicalmente diferentes. Publicado em 1963, o livro é
-                        dividido em duas partes principais, narradas pelos dois protagonistas: Frederick Clegg, um homem
-                        introvertido e obsessivo, e Miranda Grey, uma jovem artista cheia de vida.</p>
+                    <img src="img/fornos-hitler.jpg" alt="livro os fornos de hitler">
+                    <h4>Os fornos de Hitler</h4>
+                    <p>Autor: Olga Lengyel</p>
+                    <p>Gêneros: Biografia, Holocausto</p>
+                    <button>Saiba mais</button>
                 </div>
                 <div class="books">
-                    <img src="img/culpa-das-estrelas.jpg" alt="fornos-de-hitler">
-                    <p>A Culpa é das Estrelas, de John Green, é um romance emocionante que aborda o amor, a vida e a
-                        mortalidade por meio da história de dois adolescentes que enfrentam o câncer. Publicado em 2012,
-                        o livro se tornou um fenômeno mundial pela forma como mistura drama e humor com sensibilidade.
-                    </p>
+                    <img src="img/colecionador.jpg" alt="livro o colecionador">
+                    <h4>O Colecionador</h4>
+                    <p>Autor: John Fowles</p>
+                    <p>Gêneros: Suspense, Romance</p>
+                    <button>Saiba mais</button>
+                </div>
+                <div class="books">
+                    <img src="img/verity.jpg" alt="livro verity">
+                    <h4>Verity</h4>
+                    <p>Autor: Collen Hoover</p>
+                    <p>Gêneros: Suspense, Romance</p>
+                    <button>Saiba mais</button>
+                </div>
+                <div class="books">
+                    <img src="img/herdeiras-do-mar.jpg" alt="livro herdeiras do mar">
+                    <h4>Herdeiras do Mar</h4>
+                    <p>Autor: Mary Lynn Bracht</p>
+                    <p>Gêneros: Ficção, Drama, Biografia</p>
+                    <button>Saiba mais</button>
+                </div>
+                <div class="books">
+                    <img src="img/a-paciente-silenciosa.jpg" alt="livro a paciente silenciosa">
+                    <h4>A Paciente Silenciosa</h4>
+                    <p>Autor: Alex Michaelides</p>
+                    <p>Gêneros: Thriller, Suspense</p>
+                    <button>Saiba mais</button>
+                </div>
+                <div class="books">
+                    <img src="img/uma-vida-pequena.jpg" alt="livro uma vida pequena">
+                    <h4>Uma Vida Pequena</h4>
+                    <p>Autor: Hanya Yanagihara</p>
+                    <p>Gêneros: Drama, Ficção, Romance</p>
+                    <button>Saiba mais</button>
+                </div>
+                <div class="books">
+                    <img src="img/tudo-e-rio.jpg" alt="livro tudo é rio">
+                    <h4>Tudo é Rio</h4>
+                    <p>Autor: Carla Madeira</p>
+                    <p>Gêneros: Drama, Ficção, Romance</p>
+                    <button>Saiba mais</button>
+                </div>
+                <div class="books">
+                    <img src="img/jantar-secreto.jpg" alt="livro jantar secreto">
+                    <h4>Jnatar Secreto</h4>
+                    <p>Autor: Raphael Montes</p>
+                    <p>Gêneros: Terror, Suspense</p>
+                    <button>Saiba mais</button>
+                </div>
+                <div class="books">
+                    <img src="img/em-algum-lugar-nas-estrelas.jpg" alt="livro em algum nas estrelas">
+                    <h4>Em Algum Lugar nas Estrelas</h4>
+                    <p>Autor: Clare Vanderpool</p>
+                    <p>Gêneros: Fantasia</p>
+                    <button>Saiba mais</button>
+                </div>
+                <div class="books">
+                    <img src="img/a-garota-do-lago.jpg" alt="livro a garota do lago">
+                    <h4>A Garota do Lago</h4>
+                    <p>Autor: Charlie Donlea</p>
+                    <p>Gêneros: Suspense, Thriller</p>
+                    <button>Saiba mais</button>
+                </div>
+                <div class="books">
+                    <img src="img/o-talentoso-ripley.jpg" alt="livro o talentoso ripley">
+                    <h4>O Talentoso Ripley</h4>
+                    <p>Autor: Patricia Highsmith</p>
+                    <p>Gêneros: Ficção, Suspense</p>
+                    <button>Saiba mais</button>
                 </div>
             </div>
-
             <div>
-                <button class="button">Ver mais</button>
+                <button id="button-top" class="button">Voltar ao topo</button>
             </div>
-
         </section>
-
         <footer class="container-footer">
             <div class="footer-social-media">
-                <p>REDES SOCIAIS</p>
-                <ul>
-                    <li><a href="#">LINKEDIN</a></li>
-                    <li><a href="#">GITHUB</a></li>
-                    <li><a href="#">SKOOB</a></li>
-                    <li><a href="#">INSTAGRAM</a></li>
-                </ul>
+                <a href="https://www.linkedin.com/in/rafaela-mazzelli/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in fa-lg"></i></a>
+                <a href="https://github.com/RafaelaAugustini" target="_blank"><i
+                        class="fa-brands fa-github fa-lg"></i></a>
+                <a href="https://www.instagram.com/mszlli/" target="_blank"><i
+                        class="fa-brands fa-instagram fa-lg"></i></a>
+            </div>
+            <div class="contact">
+                <p>Dúvidas, sugestões ou feedback?</p>
+                <p>Entre em contato:</p>
+                <p>rafaelamazzelli@hotmail.com</p>
             </div>
         </footer>
     </main>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

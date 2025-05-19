@@ -1,12 +1,42 @@
-/* reset css */
-
 * {
     padding: 0;
     margin: 0;
     font-family: "Questrial", sans-serif;
 }
 
-/* nav */
+dialog {
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+dialog p {
+    padding: 26px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+#close {
+    background-color: #6495ed;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#close:hover {
+    background-color: #8fb1f1;
+}
 
 .nav-container {
     border-bottom: 2px solid rgba(173, 216, 230, 0.4);
@@ -45,6 +75,42 @@
 .items ul a {
     text-decoration: none;
     color: #000;
+    padding: 10px;
+}
+
+.items ul li {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 190px;
+    z-index: 10;
+}
+
+.submenu ul {
+    flex-direction: column;
+}
+
+.submenu ul li {
+    padding: 8px 15px;
+}
+
+.submenu ul li a {
+    color: #000;
+    display: block;
+}
+
+.items ul li:hover .submenu {
+    display: block;
 }
 
 .search-bar input {
@@ -65,10 +131,18 @@
     height: 22px;
 }
 
-/* timeline */
+.search-bar img:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.search-bar input::placeholder {
+    color: #e4e4e4;
+}
 
 .logo-banner {
-    background-image: url(img/heart.png);
+    background-image: url(img/img-main.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -112,8 +186,6 @@
     font-size: 30px;
 }
 
-/* recommendations */
-
 .container-recommendations {
     padding: 3rem 0;
     text-align: center;
@@ -121,9 +193,10 @@
 
 .book-rec {
     display: flex;
-    width: 60%;
+    width: fit-content;
     margin: 0 auto;
-    gap: 12px;
+    text-align: center;
+    gap: 30px;
     padding: 3rem 0;
 }
 
@@ -141,30 +214,46 @@
     color: #fff;
 }
 
-/* reviews */
+.recommendation p {
+    cursor: pointer;
+}
+
+.recommendation:hover {
+
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out;
+}
 
 .container-reviews {
     display: flex;
     flex-direction: column;
     text-align: center;
     margin: 0 auto;
-    max-width: 1600px;
-    padding: 2rem 0;
+    max-width: fit-content;
+    padding: 3rem 0;
 }
 
 .reviews {
     display: flex;
     padding: 2rem 0;
-    width: 90%;
+    width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
     text-align: center;
     gap: 20px;
+    overflow-x: hidden;
 }
 
 .books {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     text-align: center;
-    padding: 20px;
+    padding: 1rem;
+    margin: 0px 10px 0px 10px;
+    background: linear-gradient(120deg, #cddeff 0%, #fff 140%);
+    border-radius: 12px;
+    height: fit-content;
 }
 
 .books img {
@@ -173,12 +262,23 @@
     padding: 1rem 0;
 }
 
+.books h4 {
+    font-size: 18px;
+}
+
 .books p {
-    max-width: 500px;
+    font-size: 16px;
+}
+
+.books button {
+    border-radius: 8px;
+    border: 1px #ccc;
+    background-color: #6495ed;
+    padding: 8px;
+    width: fit-content;
     margin: 0 auto;
-    text-align: justify;
-    word-spacing: -0.3px;
-    line-height: 20px;
+    cursor: pointer;
+    color: #fff;
 }
 
 .button {
@@ -196,33 +296,21 @@
     border-color: #fff;
 }
 
-/* footer */
-
 .container-footer {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     background-color: #6495ed;
-    text-decoration: none;
+    padding: 1rem;
 }
 
-.footer-social-media {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 14px;
-    padding: 3rem 0;
-}
-
-.footer-social-media ul {
-    list-style: none;
-    margin-top: 10px;
-}
-
-.footer-social-media li {
-    padding: 2px;
-}
-
-.footer-social-media a {
-    text-decoration: none;
+.footer-social-media i {
+    max-width: fit-content;
+    margin-right: 10px;
     color: #000;
+}
+
+.contact {
+    line-height: 22px;
+    font-size: 0.850rem;
 }
